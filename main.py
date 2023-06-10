@@ -63,7 +63,7 @@ class GameManager:
         return {k:v for k,v in self.players.items() if k != self.myID}
 
     def nextMove(self):
-        return "up"
+        return choice(["up", "down", "left", "right"])
 
 class Player:
     def __init__(self, name: str, posX: str, posY: str):
@@ -91,8 +91,7 @@ def main():
             for msg in msglst:
                 match msg[0]:
                     case "error":
-                        tcp.end()
-                        return
+                        pass
                     case "motd":
                         pass
                     case "game":
@@ -105,10 +104,12 @@ def main():
                     case "tick":
                         try:
                             tcp.writeStream("move", game.nextMove())
-                        except NameError: pass
+                        except: pass
                     case "die":
                         for id in msg[1:]:
-                            game.remPlayer(id)
+                            try:
+                                game.remPlayer(id)
+                            except: pass
                     case "message":
                         game.players[msg[1]].addMsg(msg[2])
                     case "win":

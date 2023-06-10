@@ -2,159 +2,62 @@ connection established
 written stream < join|Logogistiksv0.0|1234Nase
  >
 read stream < ['motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md'] >
-read stream < ['game|56|56|1'] >
-read stream < ['player|0|deki', 'player|1|Logogistiksv0.0', 'player|2|oolongSlayer', 'player|3|anselm', 'player|4|blah', 'player|5|Open Source Anarcho Communist', 'player|6|GLaDOS v0.0', 'player|7|bene-bot', 'player|8|moku', 'player|9|runs in O(n!)', 'player|10|NobodysNightmare', 'player|11|masterX244', 'player|12|Where_am_I', 'player|13|the better random!', 'player|14|I tried python, but it slow', 'player|15|Have you tried Rust?', 'player|16|julian', 'player|17|bot1', 'player|18|Frog2', 'player|19|John Doe v2', 'player|20|bot0', 'player|21|michael-1.0.3', 'player|22|Sautchuk', 'player|23|vbot', 'player|24|hemi3', 'player|25|Kontroller', 'player|26|SolidTux', 'player|27|LeibnizKitty', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'pos|6|12|12', 'pos|7|14|14', 'pos|8|16|16', 'pos|9|18|18', 'pos|10|20|20', 'pos|11|22|22', 'pos|12|24|24', 'pos|13|26|26', 'pos|14|28|28', 'pos|15|30|30', 'pos|16|32|32', 'pos|17|34|34', 'pos|18|36|36', 'pos|19|38|38', 'pos|20|40|40', 'pos|21|42|42', 'pos|22|44|44', 'pos|23|46|46', 'pos|24|48|48', 'pos|25|50|50', 'pos|26|52|52', 'pos|27|54|54', 'tick', 'message|11|Red 5 standing by'] >
-written stream < move|up
+read stream < ['game|58|58|28'] >
+written stream < chat|Let this be the hour when we draw swords together.
  >
-read stream < ['die|26|2|18|22', 'pos|0|1|0', 'pos|1|2|1', 'pos|3|5|6', 'pos|4|9|8', 'pos|5|11|10', 'pos|6|12|11', 'pos|7|15|14', 'pos|8|17|16', 'pos|9|18|17', 'pos|10|20|19', 'pos|11|22|23', 'pos|12|24|25', 'pos|13|25|26', 'pos|14|28|29', 'pos|15|29|30', 'pos|16|32|31', 'pos|17|33|34', 'pos|19|39|38', 'pos|20|41|40', 'pos|21|43|42', 'pos|23|45|46', 'pos|24|48|49', 'pos|25|50|49', 'pos|27|54|53'] >
+read stream < ['player|0|masterX244', 'player|1|Frog2', 'player|2|bot0', 'player|3|John Doe v2', 'player|4|blah', 'player|5|bene-bot', 'player|6|deki', 'player|7|anselm', 'player|8|vbot', 'player|9|bot1', 'player|10|I tried python, but it slow', 'player|11|the better random!', 'player|12|SolidTux', 'player|13|moku', 'player|14|bot diffv2', 'player|15|hemi3', 'player|16|Have you tried Rust?', 'player|17|Open Source Anarcho Communist', 'player|18|NobodysNightmare', 'player|19|Where_am_I', 'player|20|michael-1.0.3', 'player|21|runs in O(n!)', 'player|22|Sautchuk', 'player|23|julian', 'player|24|oolongSlayer', 'player|25|GLaDOS v0.0', 'player|26|Clutch Machine', 'player|27|Kontroller', 'player|28|Logogistiksv0.0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'pos|6|12|12', 'pos|7|14|14', 'pos|8|16|16', 'pos|9|18|18', 'pos|10|20|20', 'pos|11|22|22', 'pos|12|24|24', 'pos|13|26|26', 'pos|14|28|28', 'pos|15|30|30', 'pos|16|32|32', 'pos|17|34|34', 'pos|18|36|36', 'pos|19|38|38', 'pos|20|40|40', 'pos|21|42|42', 'pos|22|44|44', 'pos|23|46|46', 'pos|24|48|48', 'pos|25|50|50', 'pos|26|52|52', 'pos|27|54|54', 'pos|28|56|56', 'tick', 'message|0|Red 5 standing by'] >
+written stream < move|down
+ >
+read stream < ['message|28|Let this be the hour when we draw swords together.'] >
+read stream < ['die|12|1|22|24', 'pos|0|0|1', 'pos|2|3|4', 'pos|3|7|6', 'pos|4|7|8', 'pos|5|11|10', 'pos|6|13|12', 'pos|7|14|15', 'pos|8|15|16', 'pos|9|18|17', 'pos|10|20|21', 'pos|11|22|23', 'pos|13|27|26', 'pos|14|27|28', 'pos|15|30|31', 'pos|16|31|32', 'pos|17|35|34', 'pos|18|36|35', 'pos|19|38|39', 'pos|20|41|40', 'pos|21|42|41', 'pos|23|46|45', 'pos|25|50|51', 'pos|26|52|51', 'pos|27|54|53', 'pos|28|56|57'] >
+read stream < ['tick'] >
+written stream < move|right
+ >
+read stream < ['pos|0|57|1', 'pos|2|3|3', 'pos|3|7|5', 'pos|4|6|8', 'pos|5|11|11', 'pos|6|14|12', 'pos|7|13|15', 'pos|8|14|16', 'pos|9|18|16', 'pos|10|20|22', 'pos|11|22|24', 'pos|13|28|26', 'pos|14|27|29', 'pos|15|30|32', 'pos|16|31|33', 'pos|17|36|34', 'pos|18|37|35', 'pos|19|38|40', 'pos|20|41|39', 'pos|21|43|41', 'pos|23|46|44', 'pos|25|50|52', 'pos|26|52|50', 'pos|27|54|52', 'pos|28|57|57'] >
+read stream < ['tick'] >
+written stream < move|right
+ >
+read stream < ['pos|0|56|1', 'pos|2|2|3', 'pos|3|7|4', 'pos|4|6|9', 'pos|5|11|12', 'pos|6|15|12', 'pos|7|12|15', 'pos|8|13|16', 'pos|9|18|15', 'pos|10|21|22', 'pos|11|22|25', 'pos|13|29|26', 'pos|14|26|29', 'pos|15|30|33', 'pos|16|32|33', 'pos|17|37|34', 'pos|18|38|35', 'pos|19|38|41', 'pos|20|41|38', 'pos|21|43|42', 'pos|23|46|43', 'pos|25|51|52', 'pos|26|52|49', 'pos|27|54|51', 'pos|28|0|57'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['lose|0|13'] >
+read stream < ['game|54|54|13'] >
+written stream < chat|We needs it. Must have the precious.
+
+ >
+read stream < ['player|0|bot0', 'player|1|moku', 'player|2|SolidTux', 'player|3|deki', 'player|4|GLaDOS v0.0', 'player|5|Clutch Machine', 'player|6|vbot', 'player|7|hemi3', 'player|8|Kontroller', 'player|9|Frog2', 'player|10|Open Source Anarcho Communist', 'player|11|Where_am_I', 'player|12|John Doe v2', 'player|13|Logogistiksv0.0', 'player|14|I tried python, but it slow', 'player|15|runs in O(n!)', 'player|16|bene-bot', 'player|17|bot1', 'player|18|Have you tried Rust?', 'player|19|blah', 'player|20|julian', 'player|21|anselm', 'player|22|michael-1.0.3', 'player|23|NobodysNightmare', 'player|24|the better random!', 'player|25|masterX244', 'player|26|oolongSlayer', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'pos|6|12|12', 'pos|7|14|14', 'pos|8|16|16', 'pos|9|18|18', 'pos|10|20|20', 'pos|11|22|22', 'pos|12|24|24', 'pos|13|26|26', 'pos|14|28|28', 'pos|15|30|30', 'pos|16|32|32', 'pos|17|34|34', 'pos|18|36|36', 'pos|19|38|38', 'pos|20|40|40', 'pos|21|42|42', 'pos|22|44|44', 'pos|23|46|46', 'pos|24|48|48', 'pos|25|50|50', 'pos|26|52|52', 'tick', 'message|25|Red 5 standing by'] >
+written stream < move|left
+ >
+read stream < ['message|13|We needs it. Must have the precious.', 'error|ERROR_UNKNOWN_PACKET'] >
+read stream < ['die|2|9|26', 'pos|0|1|0', 'pos|1|3|2', 'pos|3|7|6', 'pos|4|9|8', 'pos|5|10|11', 'pos|6|11|12', 'pos|7|14|15', 'pos|8|16|15', 'pos|10|21|20', 'pos|11|23|22', 'pos|12|25|24', 'pos|13|25|26', 'pos|14|28|29', 'pos|15|31|30', 'pos|16|31|32', 'pos|17|33|34', 'pos|18|35|36', 'pos|19|38|39', 'pos|20|40|39', 'pos|21|42|43', 'pos|22|43|44', 'pos|23|46|45', 'pos|24|47|48', 'pos|25|50|51'] >
+read stream < ['tick'] >
+written stream < move|left
+ >
+read stream < ['pos|0|1|53', 'pos|1|4|2', 'pos|3|8|6', 'pos|4|10|8', 'pos|5|9|11', 'pos|6|10|12', 'pos|7|14|16', 'pos|8|16|14', 'pos|10|22|20', 'pos|11|23|23', 'pos|12|25|23', 'pos|13|24|26', 'pos|14|28|30', 'pos|15|31|29', 'pos|16|31|31', 'pos|17|33|33', 'pos|18|34|36', 'pos|19|38|40', 'pos|20|40|38', 'pos|21|41|43', 'pos|22|43|45', 'pos|23|47|45', 'pos|24|47|49', 'pos|25|51|51'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['message|6|have you tried brainfuck?'] >
+read stream < ['message|21|up'] >
+read stream < ['pos|0|1|52', 'pos|1|5|2', 'pos|3|8|7', 'pos|4|10|9', 'pos|5|8|11', 'pos|6|9|12', 'pos|7|14|17', 'pos|8|16|13', 'pos|10|23|20', 'pos|11|22|23', 'pos|12|26|23', 'pos|13|24|27', 'pos|14|29|30', 'pos|15|31|28', 'pos|16|30|31', 'pos|17|32|33', 'pos|18|33|36', 'pos|19|37|40', 'pos|20|40|37', 'pos|21|41|44', 'pos|22|43|46', 'pos|23|48|45', 'pos|24|48|49', 'pos|25|51|50'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['pos|0|2|52', 'pos|1|6|2', 'pos|3|7|7', 'pos|4|11|9', 'pos|5|7|11', 'pos|6|8|12', 'pos|7|14|18', 'pos|8|16|12', 'pos|10|24|20', 'pos|11|21|23', 'pos|12|26|24', 'pos|13|24|28', 'pos|14|29|29', 'pos|15|31|27', 'pos|16|29|31', 'pos|17|31|33', 'pos|18|32|36', 'pos|19|37|41', 'pos|20|40|36', 'pos|21|40|44', 'pos|22|44|46', 'pos|23|48|44', 'pos|24|49|49', 'pos|25|51|49'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['pos|0|3|52', 'pos|1|7|2', 'pos|3|7|8', 'pos|4|12|9', 'pos|5|6|11', 'pos|6|7|12', 'pos|7|14|19', 'pos|8|16|11', 'pos|10|25|20', 'pos|11|20|23', 'pos|12|27|24', 'pos|13|24|29', 'pos|14|30|29', 'pos|15|31|26', 'pos|16|28|31', 'pos|17|30|33', 'pos|18|31|36', 'pos|19|36|41', 'pos|20|40|35', 'pos|21|39|44', 'pos|22|44|47', 'pos|23|48|43', 'pos|24|49|50', 'pos|25|51|48'] >
+read stream < ['tick'] >
+written stream < move|right
+ >
+read stream < ['pos|0|4|52', 'pos|1|8|2', 'pos|3|7|9', 'pos|4|13|9', 'pos|5|5|11', 'pos|6|6|12', 'pos|7|14|20', 'pos|8|16|10', 'pos|10|26|20', 'pos|11|19|23', 'pos|12|28|24', 'pos|13|25|29', 'pos|14|30|28', 'pos|15|30|26', 'pos|16|27|31', 'pos|17|30|34', 'pos|18|30|36', 'pos|19|35|41', 'pos|20|40|34', 'pos|21|38|44', 'pos|22|43|47', 'pos|23|48|42', 'pos|24|48|50', 'pos|25|50|48'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['pos|0|5|52', 'pos|1|9|2', 'pos|3|7|10', 'pos|4|14|9', 'pos|5|4|11', 'pos|6|5|12', 'pos|7|14|21', 'pos|8|16|9', 'pos|10|27|20', 'pos|11|18|23', 'pos|12|28|23', 'pos|13|25|30', 'pos|14|29|28', 'pos|15|30|25', 'pos|16|27|30', 'pos|17|29|34', 'pos|18|29|36', 'pos|19|35|40', 'pos|20|40|33', 'pos|21|38|45', 'pos|22|42|47', 'pos|23|49|42', 'pos|24|48|51', 'pos|25|49|48'] >
 read stream < ['tick'] >
 written stream < move|up
  >
-read stream < ['pos|0|1|55', 'pos|1|2|0', 'pos|3|5|7', 'pos|4|10|8', 'pos|5|12|10', 'pos|6|13|11', 'pos|7|15|15', 'pos|8|18|16', 'pos|9|19|17', 'pos|10|21|19', 'pos|11|21|23', 'pos|12|24|26', 'pos|13|25|25', 'pos|14|27|29', 'pos|15|29|31', 'pos|16|32|30', 'pos|17|33|35', 'pos|19|40|38', 'pos|20|41|41', 'pos|21|43|41', 'pos|23|44|46', 'pos|24|48|50', 'pos|25|50|48', 'pos|27|54|52'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|1|54', 'pos|1|2|55', 'pos|3|4|7', 'pos|4|10|7', 'pos|5|13|10', 'pos|6|13|12', 'pos|7|15|16', 'pos|8|19|16', 'pos|9|19|18', 'pos|10|22|19', 'pos|11|21|22', 'pos|12|24|27', 'pos|13|26|25', 'pos|14|26|29', 'pos|15|28|31', 'pos|16|32|29', 'pos|17|33|36', 'pos|19|41|38', 'pos|20|40|41', 'pos|21|44|41', 'pos|23|43|46', 'pos|24|48|51', 'pos|25|50|47', 'pos|27|54|51'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|1|53', 'pos|1|2|54', 'pos|3|4|8', 'pos|4|9|7', 'pos|5|14|10', 'pos|6|13|13', 'pos|7|15|17', 'pos|8|20|16', 'pos|9|20|18', 'pos|10|23|19', 'pos|11|21|21', 'pos|12|23|27', 'pos|13|26|24', 'pos|14|26|30', 'pos|15|27|31', 'pos|16|32|28', 'pos|17|34|36', 'pos|19|42|38', 'pos|20|40|42', 'pos|21|45|41', 'pos|23|42|46', 'pos|24|48|52', 'pos|25|50|46', 'pos|27|54|50'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|0|53', 'pos|1|2|53', 'pos|3|3|8', 'pos|4|8|7', 'pos|5|15|10', 'pos|6|13|14', 'pos|7|16|17', 'pos|8|21|16', 'pos|9|21|18', 'pos|10|24|19', 'pos|11|22|21', 'pos|12|22|27', 'pos|13|27|24', 'pos|14|25|30', 'pos|15|27|32', 'pos|16|32|27', 'pos|17|34|37', 'pos|19|43|38', 'pos|20|39|42', 'pos|21|46|41', 'pos|23|41|46', 'pos|24|48|53', 'pos|25|50|45', 'pos|27|54|49'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|0|54', 'pos|1|2|52', 'pos|3|3|9', 'pos|4|7|7', 'pos|5|16|10', 'pos|6|13|15', 'pos|7|17|17', 'pos|8|22|16', 'pos|9|22|18', 'pos|10|25|19', 'pos|11|23|21', 'pos|12|21|27', 'pos|13|27|25', 'pos|14|25|29', 'pos|15|26|32', 'pos|16|32|26', 'pos|17|35|37', 'pos|19|43|37', 'pos|20|39|41', 'pos|21|47|41', 'pos|23|40|46', 'pos|24|48|54', 'pos|25|50|44', 'pos|27|54|48'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['message|23|have you tried brainfuck?'] >
-read stream < ['message|3|P != NP'] >
-read stream < ['pos|0|0|55', 'pos|1|2|51', 'pos|3|4|9', 'pos|4|7|8', 'pos|5|17|10', 'pos|6|14|15', 'pos|7|17|18', 'pos|8|23|16', 'pos|9|23|18', 'pos|10|26|19', 'pos|11|23|22', 'pos|12|20|27', 'pos|13|27|26', 'pos|14|25|28', 'pos|15|25|32', 'pos|16|32|25', 'pos|17|36|37', 'pos|19|43|36', 'pos|20|38|41', 'pos|21|48|41', 'pos|23|39|46', 'pos|24|48|55', 'pos|25|50|43', 'pos|27|54|47'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|55|55', 'pos|1|2|50', 'pos|3|5|9', 'pos|4|6|8', 'pos|5|18|10', 'pos|6|14|16', 'pos|7|17|19', 'pos|8|24|16', 'pos|9|24|18', 'pos|10|27|19', 'pos|11|23|23', 'pos|12|19|27', 'pos|13|27|27', 'pos|14|24|28', 'pos|15|24|32', 'pos|16|32|24', 'pos|17|37|37', 'pos|19|44|36', 'pos|20|37|41', 'pos|21|48|40', 'pos|23|38|46', 'pos|24|48|0', 'pos|25|50|42', 'pos|27|54|46'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|55|0', 'pos|1|2|49', 'pos|3|5|10', 'pos|4|6|9', 'pos|5|19|10', 'pos|6|14|17', 'pos|7|18|19', 'pos|8|25|16', 'pos|9|25|18', 'pos|10|28|19', 'pos|11|23|24', 'pos|12|18|27', 'pos|13|27|28', 'pos|14|24|29', 'pos|15|23|32', 'pos|16|32|23', 'pos|17|38|37', 'pos|19|44|37', 'pos|20|37|40', 'pos|21|48|39', 'pos|23|37|46', 'pos|24|48|1', 'pos|25|50|41', 'pos|27|54|45'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|55|1', 'pos|1|2|48', 'pos|3|5|11', 'pos|4|7|9', 'pos|5|20|10', 'pos|6|14|18', 'pos|7|18|20', 'pos|8|26|16', 'pos|9|26|18', 'pos|10|29|19', 'pos|11|22|24', 'pos|12|17|27', 'pos|13|26|28', 'pos|14|24|30', 'pos|15|22|32', 'pos|16|32|22', 'pos|17|39|37', 'pos|19|44|38', 'pos|20|36|40', 'pos|21|48|38', 'pos|23|36|46', 'pos|24|48|2', 'pos|25|50|40', 'pos|27|54|44'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|0|1', 'pos|1|2|47', 'pos|3|6|11', 'pos|4|8|9', 'pos|5|21|10', 'pos|6|15|18', 'pos|7|18|21', 'pos|8|27|16', 'pos|9|27|18', 'pos|10|29|18', 'pos|11|21|24', 'pos|12|16|27', 'pos|13|26|27', 'pos|14|23|30', 'pos|15|21|32', 'pos|16|32|21', 'pos|17|40|37', 'pos|19|45|38', 'pos|20|36|41', 'pos|21|48|37', 'pos|23|35|46', 'pos|24|48|3', 'pos|25|50|39', 'pos|27|54|43'] >
-read stream < ['tick', 'message|9|May your codebase be eternally tangled!'] >
-written stream < move|up
- >
-read stream < ['die|9', 'pos|0|1|1', 'pos|1|2|46', 'pos|3|7|11', 'pos|4|9|9', 'pos|5|22|10', 'pos|6|16|18', 'pos|7|19|21', 'pos|8|28|16', 'pos|10|29|17', 'pos|11|20|24', 'pos|12|15|27', 'pos|13|25|27', 'pos|14|22|30', 'pos|15|20|32', 'pos|16|32|20', 'pos|17|40|36', 'pos|19|46|38', 'pos|20|35|41', 'pos|21|48|36', 'pos|23|34|46', 'pos|24|48|4', 'pos|25|50|38', 'pos|27|54|42'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['die|8|10|13', 'pos|0|1|2', 'pos|1|2|45', 'pos|3|8|11', 'pos|4|10|9', 'pos|5|23|10', 'pos|6|16|19', 'pos|7|19|22', 'pos|11|20|23', 'pos|12|14|27', 'pos|14|21|30', 'pos|15|19|32', 'pos|16|32|19', 'pos|17|41|36', 'pos|19|47|38', 'pos|20|34|41', 'pos|21|48|35', 'pos|23|33|46', 'pos|24|48|5', 'pos|25|50|37', 'pos|27|54|41'] >
-read stream < ['tick', 'message|11|godmayFUCKingdamnit'] >
-written stream < move|up
- >
-read stream < ['message|3|P = NP'] >
-read stream < ['die|7|11', 'pos|0|1|3', 'pos|1|2|44', 'pos|3|9|11', 'pos|4|11|9', 'pos|5|24|10', 'pos|6|16|20', 'pos|12|13|27', 'pos|14|21|29', 'pos|15|18|32', 'pos|16|32|18', 'pos|17|41|35', 'pos|19|47|37', 'pos|20|34|40', 'pos|21|48|34', 'pos|23|32|46', 'pos|24|48|6', 'pos|25|50|36', 'pos|27|54|40'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|1|4', 'pos|1|2|43', 'pos|3|10|11', 'pos|4|12|9', 'pos|5|25|10', 'pos|6|16|21', 'pos|12|12|27', 'pos|14|21|28', 'pos|15|17|32', 'pos|16|32|17', 'pos|17|40|35', 'pos|19|47|36', 'pos|20|35|40', 'pos|21|48|33', 'pos|23|31|46', 'pos|24|48|7', 'pos|25|50|35', 'pos|27|54|39'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|0|4', 'pos|1|2|42', 'pos|3|10|12', 'pos|4|13|9', 'pos|5|26|10', 'pos|6|16|22', 'pos|12|11|27', 'pos|14|20|28', 'pos|15|16|32', 'pos|16|32|16', 'pos|17|40|34', 'pos|19|46|36', 'pos|20|35|39', 'pos|21|48|32', 'pos|23|30|46', 'pos|24|48|8', 'pos|25|50|34', 'pos|27|54|38'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['message|23|have you tried brainfuck?'] >
-read stream < ['pos|0|55|4', 'pos|1|2|41', 'pos|3|9|12', 'pos|4|14|9', 'pos|5|27|10', 'pos|6|15|22', 'pos|12|10|27', 'pos|14|20|29', 'pos|15|15|32', 'pos|16|32|15', 'pos|17|41|34', 'pos|19|46|35', 'pos|20|35|38', 'pos|21|48|31', 'pos|23|29|46', 'pos|24|48|9', 'pos|25|50|33', 'pos|27|54|37'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|55|5', 'pos|1|2|40', 'pos|3|8|12', 'pos|4|15|9', 'pos|5|28|10', 'pos|6|14|22', 'pos|12|9|27', 'pos|14|20|30', 'pos|15|14|32', 'pos|16|32|14', 'pos|17|42|34', 'pos|19|45|35', 'pos|20|34|38', 'pos|21|48|30', 'pos|23|28|46', 'pos|24|48|10', 'pos|25|50|32', 'pos|27|54|36'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|55|6', 'pos|1|2|39', 'pos|3|8|13', 'pos|4|16|9', 'pos|5|29|10', 'pos|6|13|22', 'pos|12|8|27', 'pos|14|20|31', 'pos|15|13|32', 'pos|16|32|13', 'pos|17|43|34', 'pos|19|44|35', 'pos|20|34|39', 'pos|21|48|29', 'pos|23|27|46', 'pos|24|48|11', 'pos|25|50|31', 'pos|27|54|35'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|55|7', 'pos|1|2|38', 'pos|3|7|13', 'pos|4|16|8', 'pos|5|30|10', 'pos|6|12|22', 'pos|12|7|27', 'pos|14|19|31', 'pos|15|12|32', 'pos|16|32|12', 'pos|17|43|33', 'pos|19|43|35', 'pos|20|33|39', 'pos|21|47|29', 'pos|23|26|46', 'pos|24|48|12', 'pos|25|50|30', 'pos|27|54|34'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|55|8', 'pos|1|2|37', 'pos|3|7|14', 'pos|4|15|8', 'pos|5|31|10', 'pos|6|11|22', 'pos|12|6|27', 'pos|14|19|30', 'pos|15|11|32', 'pos|16|32|11', 'pos|17|42|33', 'pos|19|42|35', 'pos|20|33|40', 'pos|21|46|29', 'pos|23|25|46', 'pos|24|48|13', 'pos|25|50|29', 'pos|27|54|33'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|55|9', 'pos|1|2|36', 'pos|3|6|14', 'pos|4|15|7', 'pos|5|32|10', 'pos|6|10|22', 'pos|12|5|27', 'pos|14|19|29', 'pos|15|10|32', 'pos|16|33|11', 'pos|17|41|33', 'pos|19|42|36', 'pos|20|33|41', 'pos|21|45|29', 'pos|23|24|46', 'pos|24|48|14', 'pos|25|50|28', 'pos|27|54|32'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|0|9', 'pos|1|2|35', 'pos|3|5|14', 'pos|4|16|7', 'pos|5|33|10', 'pos|6|9|22', 'pos|12|4|27', 'pos|14|19|28', 'pos|15|9|32', 'pos|16|34|11', 'pos|17|40|33', 'pos|19|42|37', 'pos|20|33|42', 'pos|21|44|29', 'pos|23|23|46', 'pos|24|48|15', 'pos|25|50|27', 'pos|27|54|31'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|0|10', 'pos|1|2|34', 'pos|3|5|13', 'pos|4|17|7', 'pos|5|34|10', 'pos|6|8|22', 'pos|12|3|27', 'pos|14|18|28', 'pos|15|8|32', 'pos|16|35|11', 'pos|17|39|33', 'pos|19|41|37', 'pos|20|32|42', 'pos|21|43|29', 'pos|23|22|46', 'pos|24|48|16', 'pos|25|50|26', 'pos|27|54|30'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['die|19', 'pos|0|1|10', 'pos|1|2|33', 'pos|3|4|13', 'pos|4|17|6', 'pos|5|35|10', 'pos|6|7|22', 'pos|12|2|27', 'pos|14|18|29', 'pos|15|7|32', 'pos|16|36|11', 'pos|17|38|33', 'pos|20|31|42', 'pos|21|43|28', 'pos|23|21|46', 'pos|24|48|17', 'pos|25|50|25', 'pos|27|54|29'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|2|10', 'pos|1|2|32', 'pos|3|4|14', 'pos|4|16|6', 'pos|5|36|10', 'pos|6|6|22', 'pos|12|1|27', 'pos|14|18|30', 'pos|15|6|32', 'pos|16|37|11', 'pos|17|38|34', 'pos|20|31|41', 'pos|21|42|28', 'pos|23|20|46', 'pos|24|48|18', 'pos|25|50|24', 'pos|27|54|28'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['message|23|have you tried brainfuck?'] >
-read stream < ['pos|0|2|9', 'pos|1|2|31', 'pos|3|3|14', 'pos|4|16|5', 'pos|5|37|10', 'pos|6|5|22', 'pos|12|1|26', 'pos|14|18|31', 'pos|15|5|32', 'pos|16|38|11', 'pos|17|38|35', 'pos|20|31|40', 'pos|21|42|27', 'pos|23|19|46', 'pos|24|48|19', 'pos|25|50|23', 'pos|27|54|27'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|2|8', 'pos|1|2|30', 'pos|3|3|15', 'pos|4|17|5', 'pos|5|38|10', 'pos|6|5|23', 'pos|12|1|25', 'pos|14|17|31', 'pos|15|4|32', 'pos|16|39|11', 'pos|17|38|36', 'pos|20|32|40', 'pos|21|42|26', 'pos|23|18|46', 'pos|24|48|20', 'pos|25|50|22', 'pos|27|54|26'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|2|7', 'pos|1|2|29', 'pos|3|3|16', 'pos|4|18|5', 'pos|5|39|10', 'pos|6|6|23', 'pos|12|1|24', 'pos|14|17|30', 'pos|15|3|32', 'pos|16|40|11', 'pos|17|39|36', 'pos|20|32|41', 'pos|21|42|25', 'pos|23|17|46', 'pos|24|48|21', 'pos|25|50|21', 'pos|27|54|25'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['die|20', 'pos|0|1|7', 'pos|1|2|28', 'pos|3|2|16', 'pos|4|18|4', 'pos|5|40|10', 'pos|6|7|23', 'pos|12|1|23', 'pos|14|17|29', 'pos|15|3|33', 'pos|16|41|11', 'pos|17|39|35', 'pos|21|43|25', 'pos|23|16|46', 'pos|24|48|22', 'pos|25|50|20', 'pos|27|54|24'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['lose|0|10'] >
-read stream < ['game|58|58|21'] >
-read stream < ['player|0|moku', 'player|1|John Doe v2', 'player|2|vbot', 'player|3|Kontroller', 'player|4|NobodysNightmare', 'player|5|anselm', 'player|6|blah', 'player|7|bene-bot', 'player|8|masterX244', 'player|9|Frog2', 'player|10|deki', 'player|11|Where_am_I', 'player|12|I tried python, but it slow', 'player|13|the better random!', 'player|14|Clutch Machine', 'player|15|bot1', 'player|16|hemi3', 'player|17|LeibnizKitty', 'player|18|Open Source Anarcho Communist', 'player|19|GLaDOS v0.0', 'player|20|oolongSlayer', 'player|21|Logogistiksv0.0', 'player|22|SolidTux', 'player|23|runs in O(n!)', 'player|24|michael-1.0.3', 'player|25|Have you tried Rust?', 'player|26|julian', 'player|27|Sautchuk', 'player|28|bot0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'pos|6|12|12', 'pos|7|14|14', 'pos|8|16|16', 'pos|9|18|18', 'pos|10|20|20', 'pos|11|22|22', 'pos|12|24|24', 'pos|13|26|26', 'pos|14|28|28', 'pos|15|30|30', 'pos|16|32|32', 'pos|17|34|34', 'pos|18|36|36', 'pos|19|38|38', 'pos|20|40|40', 'pos|21|42|42', 'pos|22|44|44', 'pos|23|46|46', 'pos|24|48|48', 'pos|25|50|50', 'pos|26|52|52', 'pos|27|54|54', 'pos|28|56|56', 'tick', 'message|8|Red 5 standing by'] >
-written stream < move|up
- >
-read stream < ['die|22|9|20|27', 'pos|0|1|0', 'pos|1|3|2', 'pos|2|3|4', 'pos|3|6|5', 'pos|4|8|7', 'pos|5|9|10', 'pos|6|13|12', 'pos|7|15|14', 'pos|8|16|17', 'pos|10|19|20', 'pos|11|22|23', 'pos|12|24|25', 'pos|13|26|25', 'pos|14|29|28', 'pos|15|30|31', 'pos|16|32|33', 'pos|17|34|33', 'pos|18|37|36', 'pos|19|39|38', 'pos|21|42|41', 'pos|23|46|45', 'pos|24|49|48', 'pos|25|49|50', 'pos|26|52|51', 'pos|28|56|55'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|2|0', 'pos|1|3|1', 'pos|2|2|4', 'pos|3|6|4', 'pos|4|9|7', 'pos|5|8|10', 'pos|6|13|11', 'pos|7|15|15', 'pos|8|15|17', 'pos|10|19|19', 'pos|11|23|23', 'pos|12|24|26', 'pos|13|27|25', 'pos|14|29|29', 'pos|15|29|31', 'pos|16|32|34', 'pos|17|34|32', 'pos|18|38|36', 'pos|19|40|38', 'pos|21|42|40', 'pos|23|46|44', 'pos|24|49|47', 'pos|25|48|50', 'pos|26|52|50', 'pos|28|56|54'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|3|0', 'pos|1|4|1', 'pos|2|1|4', 'pos|3|6|3', 'pos|4|10|7', 'pos|5|7|10', 'pos|6|12|11', 'pos|7|15|16', 'pos|8|14|17', 'pos|10|18|19', 'pos|11|23|22', 'pos|12|25|26', 'pos|13|27|24', 'pos|14|30|29', 'pos|15|28|31', 'pos|16|32|35', 'pos|17|34|31', 'pos|18|39|36', 'pos|19|41|38', 'pos|21|42|39', 'pos|23|46|43', 'pos|24|50|47', 'pos|25|47|50', 'pos|26|52|49', 'pos|28|56|53'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['pos|0|4|0', 'pos|1|4|2', 'pos|2|0|4', 'pos|3|6|2', 'pos|4|11|7', 'pos|5|6|10', 'pos|6|11|11', 'pos|7|14|16', 'pos|8|13|17', 'pos|10|17|19', 'pos|11|23|21', 'pos|12|25|25', 'pos|13|28|24', 'pos|14|30|28', 'pos|15|28|32', 'pos|16|32|36', 'pos|17|34|30', 'pos|18|40|36', 'pos|19|41|37', 'pos|21|42|38', 'pos|23|45|43', 'pos|24|50|46', 'pos|25|46|50', 'pos|26|52|48', 'pos|28|57|53'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['message|2|have you tried brainfuck?'] >
-read stream < ['pos|0|5|0', 'pos|1|4|3', 'pos|2|57|4', 'pos|3|6|1', 'pos|4|12|7', 'pos|5|5|10', 'pos|6|10|11', 'pos|7|14|15', 'pos|8|12|17', 'pos|10|16|19', 'pos|11|23|20', 'pos|12|25|24', 'pos|13|28|23', 'pos|14|30|27', 'pos|15|27|32', 'pos|16|32|37', 'pos|17|34|29', 'pos|18|41|36', 'pos|19|40|37', 'pos|21|42|37', 'pos|23|45|42', 'pos|24|50|45', 'pos|25|45|50', 'pos|26|52|47', 'pos|28|0|53'] >
-read stream < ['tick'] >
-written stream < move|up
- >
-read stream < ['lose|0|10'] >
+read stream < ['lose|0|14'] >
