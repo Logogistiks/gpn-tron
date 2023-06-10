@@ -1,0 +1,29 @@
+server: motd
+
+client: join
+
+loop {
+    server: game
+
+    server: pos
+    ...
+
+    <while server sleeps> client: move
+
+    loop {
+        (server: lose) => exit loop
+
+        (server: die)
+        server: pos
+        ...
+
+        (server: win) => exit loop
+
+        server: tick
+        <while server sleeps> client: move
+    }
+}
+
+# end when:
+    - only one player && no alive players
+    - more than one player && no alive player
