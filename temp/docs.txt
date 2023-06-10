@@ -1,0 +1,12 @@
+connection made
+written stream < join|Logogistiksv0.0|1234Nase
+ >
+b'motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md\n'
+b'game|68|68|24\n'
+b'player|0|blah\nplayer|1|Have you tried Rust?\nplayer|2|bene-bot\nplayer|3|Kontroller\nplayer|4|the better random!\nplayer|5|Where_am_I\nplayer|6|TheNicks\nplayer|7|Open Source Anarcho Communist\nplayer|8|Uzumy\nplayer|9|julian\nplayer|10|yayeet v0.1\nplayer|11|admin\nplayer|12|1trick\nplayer|13|michael-1.0.3\nplayer|14|Volker\nplayer|15|bot0\nplayer|16|SolidTux\nplayer|17|bot.clj\nplayer|18|bot1\nplayer|19|tronminator2\nplayer|20|masterX244\nplayer|21|magnumchaos\nplayer|22|Frog\nplayer|23|na-tron\nplayer|24|Logogistiksv0.0\nplayer'
+b'|25|player1\nplayer|26|NobodysNightmare\nplayer|27|runs in O(n!)\nplayer|28|Clutch Machine\nplayer|29|Lesa\nplayer|30|jannis\nplayer|31|ChatGPT\nplayer|32|tron.rb\nplayer|33|GLaDOS v0.0\npos|0|0|0\npos|1|2|2\npos|2|4|4\npos|3|6|6\npos|4|8|8\npos|5|10|10\npos|6|12|12\npos|7|14|14\npos|8|16|16\npos|9|18|18\npos|10|20|20\npos|11|22|22\npos|12|24|24\npos|13|26|26\npos|14|28|28\npos|15|30|30\npos|16|32|32\npos|17|34|34\npos|18|36|36\npos|19|38|38\npos|20|40|40\npos|21|42|42\npos|22|44|44\npos|23|46|46\npos|24|48|48\npos|25|50|50\npos|26|52|52\npos'
+b'|27|54|54\npos|28|56|56\npos|29|58|58\npos|30|60|60\npos|31|62|62\npos|32|64|64\npos|33|66|66\ntick\nmessage|20|Red 5 standing by\nmessage|21|Hello, World!\n'
+b'message|29|meow\n'
+b'message|32|Rock and Stone!\n'
+b'error|ERROR_NO_MOVE\n'
+b'lose|0|4\n'
