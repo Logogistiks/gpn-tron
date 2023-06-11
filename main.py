@@ -1,6 +1,7 @@
 # https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md
 import socket
 from random import choice
+from logic1 import move
 
 def getAuth():
     with open("auth.csv") as f:
@@ -63,7 +64,7 @@ class GameManager:
         return {k:v for k,v in self.players.items() if k != self.myID}
 
     def nextMove(self):
-        return choice(["up", "down", "left", "right"])
+        move()
 
 class Player:
     def __init__(self, name: str, posX: str, posY: str):
