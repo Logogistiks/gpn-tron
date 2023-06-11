@@ -64,7 +64,7 @@ class GameManager:
         return {k:v for k,v in self.players.items() if k != self.myID}
 
     def nextMove(self):
-        move()
+        return move()
 
 class Player:
     def __init__(self, name: str, posX: str, posY: str):
@@ -96,6 +96,8 @@ def main():
                     case "motd":
                         pass
                     case "game":
+                        try: del game
+                        except: pass
                         game = GameManager(*msg[1:])
                         tcp.writeStream("chat", splash())
                     case "pos":
@@ -103,27 +105,23 @@ def main():
                     case "player":
                         game.addPlayer(msg[1], msg[2])
                     case "tick":
-                        try:
-                            tcp.writeStream("move", game.nextMove())
-                        except: pass
+                        tcp.writeStream("move", game.nextMove())
                     case "die":
-                        for id in msg[1:]:
-                            try:
+                        try:
+                            for id in msg[1:]:
                                 game.remPlayer(id)
-                            except: pass
+                        except: pass
                     case "message":
                         game.players[msg[1]].addMsg(msg[2])
                     case "win":
                         game.wins = msg[1]
                         game.losses = msg[2]
-                        del game
                     case "lose":
                         game.wins = msg[1]
                         game.losses = msg[2]
-                        del game
 
 if __name__ == "__main__":
-    HOST = "gpn-tron.duckdns.org"
+    HOST = "localhost"
     PORT = 4000
     USER, PASS = getAuth()
     logClear()
