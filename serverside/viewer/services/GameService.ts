@@ -1,5 +1,5 @@
 import { EventEmitter } from "events"
-import { WsStateClient } from "@gpn-tron/shared/lib/ws-state/client"
+import { WsStateClient } from "../../shared/lib/ws-state/client"
 
 export class GameService extends EventEmitter {
   #client: WsStateClient<ViewState>

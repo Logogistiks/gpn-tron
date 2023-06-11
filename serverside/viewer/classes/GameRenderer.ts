@@ -1,4 +1,4 @@
-import { getColor } from "@gpn-tron/shared/constants/colors"
+import { getColor } from "../../shared/constants/colors"
 import gameService from '../services/GameService'
 
 const wallSize = 1

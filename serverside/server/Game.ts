@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events'
 import { MultiElo } from 'multi-elo'
-import { baseTickrate, tickIncreaseInterval } from '@gpn-tron/shared/constants/common'
-import { getColor } from '@gpn-tron/shared/constants/colors'
+import { baseTickrate, tickIncreaseInterval } from '../shared/constants/common'
+import { getColor } from '../shared/constants/colors'
 import { Player, PlayerAction } from "./Player"
 
 export enum ScoreType {

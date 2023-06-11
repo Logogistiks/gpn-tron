@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events'
-import { escapeString, isStringValid } from '@gpn-tron/shared/utils/string'
+import { escapeString, isStringValid } from '../shared/utils/string'
 import { ClientSocket } from './ClientSocket'
 import { ScoreHistory, ScoreType } from './Game'
 

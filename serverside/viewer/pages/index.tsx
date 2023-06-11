@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getColor } from '@gpn-tron/shared/constants/colors'
+import { getColor } from '../../shared/constants/colors'
 import {
   LineChart,
   Line,
