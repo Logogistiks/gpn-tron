@@ -1,16 +1,5 @@
-from multiprocessing import Process, Pipe
-import threading
-from time import sleep
-import os
-import sys
-from subprocess import Popen
-from pathlib import Path
 import socket
 from random import choice
-
-##########################################################################
-# REGION DEF BOT START                                                   #
-##########################################################################
 
 def getAuth():
     with open("auth.csv") as f:
@@ -51,14 +40,13 @@ class Connection:
         log(f"written stream < {msg} >")
 
 class GameManager:
-    def __init__(self, mapX: str, mapY: str, id: str, comchannel):
+    def __init__(self, mapX: str, mapY: str, id: str):
         self.mapX = int(mapX)
         self.mapY = int(mapY)
         self.myID = id
         self.players = {}
         self.wins = 0
         self.losses = 0
-        self.com = comchannel
 
     def addPlayer(self, id: str, name: str=None, posX: str=None, posY: str=None):
         self.players[id] = Player(name, posX, posY)
@@ -74,14 +62,7 @@ class GameManager:
         return {k:v for k,v in self.players.items() if k != self.myID}
 
     def nextMove(self):
-        gamestate = dict(vars(self))
-        gamestate["players"] = {}
-        for id, pl in self.players.items():
-            gamestate["players"][id] = vars(pl)
-
-        self.com.send({"req move": gamestate})
-        move = self.com.recv()
-        return move
+        return choice(["up", "down", "left", "right"])
 
 class Player:
     def __init__(self, name: str, posX: str, posY: str):
@@ -98,12 +79,11 @@ class Player:
     def addMsg(self, msg: str):
         self.messages.append(msg)
 
-def main(h, p, u, pw, conn):
-    comrec = conn.recv() # wait for ready signal
+def main():
     while True:
-        tcp = Connection(h, p)
+        tcp = Connection(HOST, PORT)
         log("connection established")
-        tcp.writeStream("join", u, pw)
+        tcp.writeStream("join", USER, PASS)
 
         while True:
             msglst = tcp.readStream() # [['motd', 'You can find...']]
@@ -116,8 +96,8 @@ def main(h, p, u, pw, conn):
                     case "game":
                         try: del game
                         except: pass
-                        game = GameManager(*msg[1:], conn)
-                        #tcp.writeStream("chat", splash())
+                        game = GameManager(*msg[1:])
+                        tcp.writeStream("chat", splash())
                     case "pos":
                         game.players[msg[1]].updatePos(*msg[2:])
                     case "player":
@@ -138,58 +118,10 @@ def main(h, p, u, pw, conn):
                         game.wins = msg[1]
                         game.losses = msg[2]
 
-##########################################################################
-#  REGION DEF BOT END                                                    #
-##########################################################################
+HOST = "localhost"
+PORT = 4000
+USER, PASS = getAuth()
+logClear()
 
-def startServer(num):
-    original = os.getcwd()
-    new = Path(original[0].upper() + original[1:], "serverside")
-    sub = Path(original[0].upper() + original[1:], "serverside", "server")
-
-    os.chdir(sub)
-    with open("index_original.ts", "r") as f:
-        code = f.readlines()
-        newcode = "".join([line if not line.startswith("const NUMBOTS") else f"const NUMBOTS = {num}\n" for line in code])
-    with open("index.ts", "w") as f:
-        f.write(newcode)
-
-    os.chdir(new)
-    os.system("yarn dev")
-    os.chdir(original)
-
-def startBot(conn):
-    os.chdir("bot")
-    HOST = "localhost"
-    PORT = 4000
-    USER, PASS = getAuth()
-    logClear()
-    while True:
-        main(HOST, PORT, USER, PASS, conn)
-
-def startRL(conn):
-    # start rl file here
-    conn.send("ready")
-    while True:
-        comrec = conn.recv()
-        if "req move" in comrec:
-            gamestate = comrec["req move"]
-            move = choice(["up", "down", "left", "right"]) # interact with rl agent based on gamestate
-            conn.send(move)
-
-if __name__ == '__main__':
-    numBots = 5
-
-    conn1, conn2 = Pipe(duplex=True)
-
-    server = Process(target=startServer, args=[numBots])
-    bot = threading.Thread(target=startBot, args=[conn1])
-    rl = Process(target=startRL, args=[conn2])
-
-    server.start()
-    bot.start()
-    rl.start()
-
-    server.join()
-    bot.join()
-    rl.join()
+while True:
+    main()
