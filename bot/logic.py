@@ -14,28 +14,29 @@ class Player:
 
     def updatePos(self, newPosX: str, newPosY: str) -> None: # todo: urgently refactor logic structure
         """Updates the player's position and direction."""
-        diffX = int(newPosX) - int(self.pos[-1][0])
-        diffY = int(newPosY) - int(self.pos[-1][1])
-        if abs(diffX) == 1: # in board
-            if diffX > 0:
-                self.dir = "right"
-            elif diffX < 0:
-                self.dir = "left"
-        else: # loop around
-            if diffX < 0:
-                self.dir = "right"
-            elif diffX > 0:
-                self.dir = "left"
-        if abs(diffY) == 1: # in board
-            if diffY > 0:
-                self.dir = "down"
-            elif diffY < 0:
-                self.dir = "up"
-        else: # loop around
-            if diffY < 0:
-                self.dir = "down"
-            elif diffY > 0:
-                self.dir = "up"
+        if self.pos: #not first move
+            diffX = int(newPosX) - int(self.pos[-1][0])
+            diffY = int(newPosY) - int(self.pos[-1][1])
+            if abs(diffX) == 1: # in board
+                if diffX > 0:
+                    self.dir = "right"
+                elif diffX < 0:
+                    self.dir = "left"
+            else: # loop around
+                if diffX < 0:
+                    self.dir = "right"
+                elif diffX > 0:
+                    self.dir = "left"
+            if abs(diffY) == 1: # in board
+                if diffY > 0:
+                    self.dir = "down"
+                elif diffY < 0:
+                    self.dir = "up"
+            else: # loop around
+                if diffY < 0:
+                    self.dir = "down"
+                elif diffY > 0:
+                    self.dir = "up"
         self.pos.append((newPosX, newPosY))
 
     def getPos(self) -> tuple[int, int]:
@@ -55,7 +56,7 @@ class GameHandler:
         """Creates a game object."""
         self.sizeX = int(sizeX)
         self.sizeY = int(sizeY)
-        self.map = [[" "]*sizeX]*sizeY
+        self.map = [[" "]*int(sizeX)]*int(sizeY)
         self.players: dict[str, Player] = {}
         self.myID = id
         self.wins = 0

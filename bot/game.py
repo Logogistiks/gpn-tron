@@ -1,16 +1,24 @@
 # https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md
 # https://github.com/freehuntx/gpn-tron/blob/master/ERRORCODES.md
 
+import os
+from random import random
+from time import sleep
+
 # local
 from utils import log, getAuth, logClear, splash, updateStats
 from connection import Connection
 from logic import GameHandler
 
-def main(host: str, port: int, chat: bool=False, verbose: bool=True) -> None:
+def main(host: str, port: int, chat: bool=False, chatProb: int|float=10) -> None:
+    """Parameters:
+    * `host`: str - the server host
+    * `port`: int - the server port
+    * `chat`: bool - whether to enable chat
+    * `chatProb`: int|float - the probability of sending a chat message each tick in percent"""
     logClear()
     tcp = Connection(host, port)
-    if verbose:
-        log("connection established")
+    log("connection established")
     tcp.writeStream("join", *getAuth().values())
 
     try:
@@ -23,8 +31,6 @@ def main(host: str, port: int, chat: bool=False, verbose: bool=True) -> None:
                         pass # todo: handle errors
                     case "game":
                         game = GameHandler(*msg[1:]) # overwrite game object
-                        if chat:
-                            tcp.writeStream("chat", splash())
                     case "pos":
                         game.updatePlayerPos(*msg[1:])
                     case "player":
@@ -33,6 +39,9 @@ def main(host: str, port: int, chat: bool=False, verbose: bool=True) -> None:
                         newMove = game.getMe().nextMove()
                         game.getMe().dir = newMove
                         tcp.writeStream("move", newMove)
+                        if chat and random() < chatProb/100:
+                            sleep(0.05)
+                            tcp.writeStream("chat", splash())
                     case "die":
                         for id in msg[1:]:
                             game.remPlayer(id)
