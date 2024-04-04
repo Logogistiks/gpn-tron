@@ -12,31 +12,19 @@ class Player:
         self.dir = None
         self.messages = []
 
-    def updatePos(self, newPosX: str, newPosY: str) -> None: # todo: urgently refactor logic structure
+    def updatePos(self, newPosX: str, newPosY: str, sizeX: int, sizeY: int) -> None:
         """Updates the player's position and direction."""
         if self.pos: #not first move
-            diffX = int(newPosX) - int(self.pos[-1][0])
-            diffY = int(newPosY) - int(self.pos[-1][1])
-            if abs(diffX) == 1: # in board
-                if diffX > 0:
-                    self.dir = "right"
-                elif diffX < 0:
-                    self.dir = "left"
-            else: # loop around
-                if diffX < 0:
-                    self.dir = "right"
-                elif diffX > 0:
-                    self.dir = "left"
-            if abs(diffY) == 1: # in board
-                if diffY > 0:
-                    self.dir = "down"
-                elif diffY < 0:
-                    self.dir = "up"
-            else: # loop around
-                if diffY < 0:
-                    self.dir = "down"
-                elif diffY > 0:
-                    self.dir = "up"
+            dx = int(newPosX) - int(self.pos[-1][0])
+            dy = int(newPosY) - int(self.pos[-1][1])
+            if dx == 1 or dx == -sizeX:
+                self.dir = "right"
+            if dx == -1 or dx == sizeX:
+                self.dir = "left"
+            if dy == 1 or dy == -sizeY:
+                self.dir = "down"
+            if dy == -1 or dy == sizeY:
+                self.dir = "up"
         self.pos.append((newPosX, newPosY))
 
     def getPos(self) -> tuple[int, int]:
@@ -75,7 +63,7 @@ class GameHandler:
 
     def updatePlayerPos(self, id: str, posX: str, posY: str) -> None:
         """Updates a player's position."""
-        self.players[id].updatePos(posX, posY)
+        self.players[id].updatePos(posX, posY, self.sizeX, self.sizeY)
 
     def getMe(self) -> Player:
         """Returns the player object of the bot."""
