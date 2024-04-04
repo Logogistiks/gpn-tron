@@ -37,7 +37,7 @@ def reverseDir(dir: str) -> str:
 
 def updateStats(wins: int, losses: int) -> None:
     """Updates the stats file with the given wins and losses."""
-    with open(file("stats.txt"), "w") as f:
+    with open(file("stats.csv"), "w") as f:
         f.write(f"wins;losses\n{wins};{losses}")
 
 #temp

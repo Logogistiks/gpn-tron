@@ -1,2 +1,0 @@
-wins;losses
-0;67

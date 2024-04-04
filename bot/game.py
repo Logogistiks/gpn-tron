@@ -53,6 +53,7 @@ def main(host: str, port: int, chat: bool=False, chatProb: int|float=10) -> None
                         updateStats(msg[1], msg[2])
     except KeyboardInterrupt:
         tcp.end()
+        log("connection closed")
 
 if __name__ == "__main__":
     main(host="localhost", port=4000, chat=True)
