@@ -23,7 +23,7 @@ class Connection:
         decoded = self.socket.recv(buffer).decode() # "cmd1|p11|p12\ncmd2|p21|p22\n"
         cmdlst = decoded.split("\n")[:-1] # ["cmd1|p11|p12", "cmd2|p21|p22"]
         if verbose:
-            log(f"{Fore.LIGHTRED_EX}READ{Fore.WHITE} {cmdlst}")
+            log(f"{Fore.LIGHTBLUE_EX}READ{Fore.WHITE} {cmdlst}")
         return list(map(lambda x: x.split("|"), cmdlst))
 
     def writeStream(self, *args: str, verbose: bool=True) -> None:

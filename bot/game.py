@@ -4,6 +4,7 @@
 import os
 from random import random
 from time import sleep
+from colorama import Fore
 
 # local
 from utils import log, getAuth, logClear, splash, updateStats
@@ -28,7 +29,7 @@ def main(host: str, port: int, chat: bool=False, chatProb: int|float=10) -> None
                     case "motd":
                         pass # ignore
                     case "error":
-                        pass # todo: handle errors
+                        log(f"{Fore.LIGHTRED_EX}ERROR{Fore.WHITE} {msg[1]}")
                     case "game":
                         game = GameHandler(*msg[1:]) # overwrite game object
                     case "pos":
