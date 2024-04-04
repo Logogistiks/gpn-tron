@@ -1,0 +1,2 @@
+# ignore test server thats not part of the project
+serverside/* -linguist-detectable
