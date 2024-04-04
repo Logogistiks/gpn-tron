@@ -4,9 +4,9 @@
 from utils import randMove
 
 class Player:
-    def __init__(self, id: str, name: str, posX: str=None, posY: str=None) -> None:
+    def __init__(self, pID: str, name: str, posX: str=None, posY: str=None) -> None:
         """Creates a player object."""
-        self.id = id
+        self.pID = pID
         self.name = name
         self.pos = [(posX, posY)] if not None in (posX, posY) else []
         self.dir = None
@@ -36,30 +36,30 @@ class Player:
         self.messages.append(msg)
 
 class GameHandler:
-    def __init__(self, sizeX: str, sizeY: str, id: str) -> None:
+    def __init__(self, sizeX: str, sizeY: str, pID: str) -> None:
         """Creates a game object."""
         self.sizeX = int(sizeX)
         self.sizeY = int(sizeY)
         self.map = [[" "]*int(sizeX)]*int(sizeY)
         self.players: dict[str, Player] = {}
-        self.myID = id
+        self.myID = pID
         self.wins = 0
         self.losses = 0
 
-    def addPlayer(self, id: str, name: str, posX: str=None, posY: str=None) -> None:
+    def addPlayer(self, pID: str, name: str, posX: str=None, posY: str=None) -> None:
         """Adds a player to the game."""
         if not None in (posX, posY):
-            self.players[id] = Player(id, name, posX, posY)
+            self.players[pID] = Player(pID, name, posX, posY)
         else:
-            self.players[id] = Player(id, name)
+            self.players[pID] = Player(pID, name)
 
-    def remPlayer(self, id: str) -> None:
+    def remPlayer(self, pID: str) -> None:
         """Removes a player from the game."""
-        self.players.pop(id, None)
+        self.players.pop(pID, None)
 
-    def updatePlayerPos(self, id: str, posX: str, posY: str) -> None:
+    def updatePlayerPos(self, pID: str, posX: str, posY: str) -> None:
         """Updates a player's position."""
-        self.players[id].updatePos(posX, posY, self.sizeX, self.sizeY)
+        self.players[pID].updatePos(posX, posY, self.sizeX, self.sizeY)
 
     def getMe(self) -> Player:
         """Returns the player object of the bot."""
@@ -69,10 +69,14 @@ class GameHandler:
         """Returns all the other players except the bot."""
         return {k: v for k, v in self.players.items() if k != self.myID}
 
-    def nextMove(self, id: str=None) -> str: # has ability to simulate moves of other players
+    def nextMove(self, pID: str=None) -> str: # has ability to simulate moves of other players
         """Returns the next move for a player"""
-        if id is None:
-            id = self.myID
-        newMove = randMove(self.players[id].dir) #todo: implement better logic
-        self.players[id].dir = newMove
+        if pID is None:
+            pID = self.myID
+        newMove = self.calcMove(pID)
+        self.players[pID].dir = newMove
         return newMove
+
+    def calcMove(self, pID: str) -> str:
+        """Calculates the next move for the bot."""
+        return randMove(self.players[pID].dir) #todo: implement better logic
