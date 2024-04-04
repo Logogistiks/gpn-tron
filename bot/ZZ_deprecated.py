@@ -1,9 +1,10 @@
 # https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md
+import pathlib
 import socket
 from random import choice
 
 def getAuth():
-    with open("auth.csv") as f:
+    with open(str(pathlib.Path(__file__).parent.resolve()) + "\\auth.csv") as f:
         return f.readlines()[-1].split(";")
 
 def log(message: str, silent: bool=False):
@@ -13,11 +14,11 @@ def log(message: str, silent: bool=False):
         print(message)
 
 def logClear():
-    with open("log.txt", "w") as f:
+    with open(str(pathlib.Path(__file__).parent.resolve()) + "\\log.txt", "w") as f:
         f.write("")
 
 def splash():
-    with open("splashes.txt", "r") as f:
+    with open(str(pathlib.Path(__file__).parent.resolve()) + "\\splashes.txt", "r") as f:
         return choice(f.readlines())
 
 class Connection:
@@ -48,6 +49,7 @@ class GameManager:
         self.players = {}
         self.wins = 0
         self.losses = 0
+        self.directions = ["up", "down", "left", "right"]
 
     def addPlayer(self, id: str, name: str=None, posX: str=None, posY: str=None):
         self.players[id] = Player(name, posX, posY)
@@ -63,13 +65,20 @@ class GameManager:
         return {k:v for k,v in self.players.items() if k != self.myID}
 
     def nextMove(self):
-        return choice(["up", "down", "left", "right"])
+        return choice(tuple(set(self.directions) - set(self.reverseDir(self.getMe().dir))))
+
+    def reverseDir(self, dir: str):
+        if dir == "up": return "down"
+        if dir == "down": return "up"
+        if dir == "left": return "right"
+        if dir == "right": return "left"
 
 class Player:
     def __init__(self, name: str, posX: str, posY: str):
         self.name = name
         self.posX = []
         self.posY = []
+        self.dir = "up"
         self.updatePos(posX, posY)
         self.messages = []
 
@@ -104,7 +113,9 @@ def main():
                     case "player":
                         game.addPlayer(msg[1], msg[2])
                     case "tick":
-                        tcp.writeStream("move", game.nextMove())
+                        nextmove = game.nextMove()
+                        game.getMe().dir = nextmove
+                        tcp.writeStream("move", nextmove)
                     case "die":
                         try:
                             for id in msg[1:]:

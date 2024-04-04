@@ -1,0 +1,260 @@
+connection established
+written stream < join|Logogistiksv0.0|1234Nase
+ >
+read stream < ['motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md'] >
+read stream < ['game|12|12|1'] >
+connection established
+written stream < join|Logogistiksv0.0|1234Nase
+ >
+read stream < ['motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md'] >
+read stream < ['game|12|12|1'] >
+written stream < chat|Many that live deserve death. And some that die deserve life.
+
+ >
+read stream < ['player|0|bot0', 'player|1|Logogistiksv0.0', 'player|2|bot1', 'player|3|bot2', 'player|4|bot4', 'player|5|bot3', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick'] >
+written stream < move|down
+ >
+read stream < ['message|1|Many that live deserve death. And some that die deserve life.', 'error|ERROR_UNKNOWN_PACKET'] >
+read stream < ['pos|0|0|1', 'pos|1|2|3', 'pos|2|4|5', 'pos|3|6|5', 'pos|4|8|9', 'pos|5|10|9'] >
+read stream < ['tick'] >
+written stream < move|up
+ >
+read stream < ['lose|0|2'] >
+read stream < ['game|12|12|0'] >
+written stream < chat|Many that live deserve death. And some that die deserve life.
+
+ >
+read stream < ['player|0|Logogistiksv0.0', 'player|1|bot3', 'player|2|bot2', 'player|3|bot4', 'player|4|bot1', 'player|5|bot0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|0|Many that live deserve death. And some that die deserve life.'] >
+written stream < move|up
+ >
+read stream < ['error|ERROR_UNKNOWN_PACKET'] >
+read stream < ['pos|0|0|11', 'pos|1|3|2', 'pos|2|5|4', 'pos|3|6|5', 'pos|4|7|8', 'pos|5|11|10'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['lose|0|3'] >
+read stream < ['game|12|12|1'] >
+written stream < chat|And my axe.
+
+ >
+read stream < ['player|0|bot3', 'player|1|Logogistiksv0.0', 'player|2|bot1', 'player|3|bot2', 'player|4|bot0', 'player|5|bot4', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|1|And my axe.', 'error|ERROR_UNKNOWN_PACKET'] >
+written stream < move|right
+ >
+read stream < ['pos|0|1|0', 'pos|1|3|2', 'pos|2|4|5', 'pos|3|5|6', 'pos|4|8|7', 'pos|5|9|10'] >
+read stream < ['tick'] >
+written stream < move|left
+ >
+read stream < ['lose|0|4'] >
+read stream < ['game|12|12|5'] >
+written stream < chat|We needs it. Must have the precious.
+
+ >
+read stream < ['player|0|bot3', 'player|1|bot4', 'player|2|bot1', 'player|3|bot0', 'player|4|bot2', 'player|5|Logogistiksv0.0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|5|We needs it. Must have the precious.', 'error|ERROR_UNKNOWN_PACKET'] >
+written stream < move|up
+ >
+read stream < ['pos|0|0|1', 'pos|1|2|1', 'pos|2|5|4', 'pos|3|5|6', 'pos|4|9|8', 'pos|5|10|9'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['lose|0|5'] >
+connection established
+written stream < join|Logogistiksv0.0|1234Nase
+ >
+read stream < ['motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md'] >
+read stream < ['game|12|12|4'] >
+written stream < chat|And my bow.
+
+ >
+read stream < ['player|0|bot0', 'player|1|bot1', 'player|2|bot2', 'player|3|bot3', 'player|4|Logogistiksv0.0', 'player|5|bot4', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|4|And my bow.', 'error|ERROR_UNKNOWN_PACKET'] >
+connection established
+written stream < join|Logogistiksv0.0|1234Nase
+ >
+read stream < ['motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md'] >
+read stream < ['game|12|12|5'] >
+written stream < chat|And my bow.
+
+ >
+read stream < ['player|0|bot2', 'player|1|bot1', 'player|2|bot4', 'player|3|bot3', 'player|4|bot0', 'player|5|Logogistiksv0.0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|5|And my bow.'] >
+written stream < move|right
+ >
+read stream < ['error|ERROR_UNKNOWN_PACKET'] >
+read stream < ['pos|0|1|0', 'pos|1|3|2', 'pos|2|4|3', 'pos|3|5|6', 'pos|4|9|8', 'pos|5|11|10'] >
+read stream < ['tick'] >
+written stream < move|right
+ >
+read stream < ['pos|0|2|0', 'pos|1|3|3', 'pos|2|5|3', 'pos|3|5|7', 'pos|4|9|9', 'pos|5|0|10'] >
+read stream < ['tick'] >
+written stream < move|left
+ >
+read stream < ['lose|0|7'] >
+read stream < ['game|12|12|0'] >
+written stream < chat|And my axe.
+
+ >
+read stream < ['player|0|Logogistiksv0.0', 'player|1|bot2', 'player|2|bot3', 'player|3|bot1', 'player|4|bot4', 'player|5|bot0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|0|And my axe.', 'error|ERROR_UNKNOWN_PACKET'] >
+written stream < move|left
+ >
+read stream < ['pos|0|11|0', 'pos|1|2|3', 'pos|2|3|4', 'pos|3|5|6', 'pos|4|7|8', 'pos|5|9|10'] >
+read stream < ['tick'] >
+written stream < move|left
+ >
+read stream < ['pos|0|10|0', 'pos|1|1|3', 'pos|2|3|3', 'pos|3|5|7', 'pos|4|6|8', 'pos|5|9|11'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['die|3|4', 'pos|0|10|1', 'pos|1|1|4', 'pos|2|4|3', 'pos|5|9|0'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+connection established
+written stream < join|Logogistiksv0.0|1234Nase
+ >
+read stream < ['motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md'] >
+read stream < ['game|12|12|0'] >
+written stream < chat|We needs it. Must have the precious.
+
+ >
+read stream < ['player|0|Logogistiksv0.0', 'player|1|bot3', 'player|2|bot0', 'player|3|bot4', 'player|4|bot2', 'player|5|bot1', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|0|We needs it. Must have the precious.'] >
+connection established
+written stream < join|Logogistiksv0.0|1234Nase
+ >
+read stream < ['motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md'] >
+read stream < ['game|12|12|0'] >
+written stream < chat|We needs it. Must have the precious.
+
+ >
+read stream < ['player|0|Logogistiksv0.0', 'player|1|bot0', 'player|2|bot1', 'player|3|bot3', 'player|4|bot2', 'player|5|bot4', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|0|We needs it. Must have the precious.', 'error|ERROR_UNKNOWN_PACKET'] >
+written stream < move|down
+ >
+read stream < ['pos|0|0|1', 'pos|1|2|3', 'pos|2|3|4', 'pos|3|7|6', 'pos|4|9|8', 'pos|5|9|10'] >
+read stream < ['tick'] >
+written stream < move|left
+ >
+read stream < ['die|1|2', 'pos|0|11|1', 'pos|3|7|5', 'pos|4|10|8', 'pos|5|9|11'] >
+read stream < ['tick'] >
+written stream < move|right
+ >
+read stream < ['lose|0|11'] >
+read stream < ['game|12|12|2'] >
+written stream < chat|Let this be the hour when we draw swords together.
+ >
+read stream < ['player|0|bot4', 'player|1|bot1', 'player|2|Logogistiksv0.0', 'player|3|bot2', 'player|4|bot3', 'player|5|bot0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|2|Let this be the hour when we draw swords together.'] >
+written stream < move|up
+ >
+read stream < ['pos|0|0|11', 'pos|1|1|2', 'pos|2|4|3', 'pos|3|6|5', 'pos|4|9|8', 'pos|5|10|9'] >
+read stream < ['tick'] >
+written stream < move|left
+ >
+read stream < ['pos|0|11|11', 'pos|1|1|1', 'pos|2|3|3', 'pos|3|6|4', 'pos|4|10|8', 'pos|5|11|9'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['pos|0|10|11', 'pos|1|0|1', 'pos|2|3|4', 'pos|3|5|4', 'pos|4|10|7', 'pos|5|11|10'] >
+read stream < ['tick'] >
+written stream < move|up
+ >
+read stream < ['lose|0|12'] >
+read stream < ['game|12|12|4'] >
+written stream < chat|And my axe.
+
+ >
+read stream < ['player|0|bot4', 'player|1|bot3', 'player|2|bot2', 'player|3|bot1', 'player|4|Logogistiksv0.0', 'player|5|bot0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|4|And my axe.', 'error|ERROR_UNKNOWN_PACKET'] >
+written stream < move|left
+ >
+read stream < ['pos|0|0|1', 'pos|1|2|3', 'pos|2|5|4', 'pos|3|6|5', 'pos|4|7|8', 'pos|5|10|11'] >
+read stream < ['tick'] >
+written stream < move|left
+ >
+read stream < ['pos|0|1|1', 'pos|1|1|3', 'pos|2|5|5', 'pos|3|7|5', 'pos|4|6|8', 'pos|5|10|0'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['die|0|1', 'pos|2|5|6', 'pos|3|7|4', 'pos|4|6|9', 'pos|5|10|1'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['pos|2|4|6', 'pos|3|8|4', 'pos|4|6|10', 'pos|5|10|2'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['pos|2|3|6', 'pos|3|8|5', 'pos|4|6|11', 'pos|5|11|2'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['pos|2|3|5', 'pos|3|8|6', 'pos|4|6|0', 'pos|5|11|1'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['pos|2|3|4', 'pos|3|9|6', 'pos|4|6|1', 'pos|5|11|0'] >
+read stream < ['tick'] >
+written stream < move|up
+ >
+read stream < ['lose|0|13'] >
+read stream < ['game|12|12|2'] >
+written stream < chat|You Shall Not Pass!!!
+
+ >
+read stream < ['player|0|bot2', 'player|1|bot1', 'player|2|Logogistiksv0.0', 'player|3|bot0', 'player|4|bot3', 'player|5|bot4', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|2|You Shall Not Pass!!!', 'error|ERROR_UNKNOWN_PACKET'] >
+written stream < move|up
+ >
+read stream < ['pos|0|11|0', 'pos|1|3|2', 'pos|2|4|3', 'pos|3|6|5', 'pos|4|8|9', 'pos|5|9|10'] >
+read stream < ['tick'] >
+written stream < move|up
+ >
+read stream < ['lose|0|14'] >
+read stream < ['game|12|12|1'] >
+written stream < chat|A wizard is never late, nor is he early.
+
+ >
+read stream < ['player|0|bot0', 'player|1|Logogistiksv0.0', 'player|2|bot1', 'player|3|bot4', 'player|4|bot2', 'player|5|bot3', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|1|A wizard is never late, nor is he early.', 'error|ERROR_UNKNOWN_PACKET'] >
+written stream < move|right
+ >
+read stream < ['pos|0|0|11', 'pos|1|3|2', 'pos|2|4|3', 'pos|3|5|6', 'pos|4|7|8', 'pos|5|9|10'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['pos|0|1|11', 'pos|1|3|3', 'pos|2|4|2', 'pos|3|5|5', 'pos|4|7|7', 'pos|5|8|10'] >
+read stream < ['tick'] >
+written stream < move|up
+ >
+read stream < ['lose|0|15'] >
+read stream < ['game|12|12|0'] >
+written stream < chat|You Shall Not Pass!!!
+
+ >
+read stream < ['player|0|Logogistiksv0.0', 'player|1|bot4', 'player|2|bot3', 'player|3|bot2', 'player|4|bot1', 'player|5|bot0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|0|You Shall Not Pass!!!', 'error|ERROR_UNKNOWN_PACKET'] >
+written stream < move|up
+ >
+read stream < ['pos|0|0|11', 'pos|1|2|1', 'pos|2|4|5', 'pos|3|6|7', 'pos|4|9|8', 'pos|5|11|10'] >
+read stream < ['tick'] >
+written stream < move|down
+ >
+read stream < ['lose|0|16'] >
+read stream < ['game|12|12|3'] >
+written stream < chat|You Shall Not Pass!!!
+
+ >
+read stream < ['player|0|bot0', 'player|1|bot1', 'player|2|bot3', 'player|3|Logogistiksv0.0', 'player|4|bot4', 'player|5|bot2', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick', 'message|3|You Shall Not Pass!!!', 'error|ERROR_UNKNOWN_PACKET'] >
+written stream < move|right
+ >
+read stream < ['pos|0|0|1', 'pos|1|2|1', 'pos|2|4|3', 'pos|3|7|6', 'pos|4|7|8', 'pos|5|11|10'] >
+read stream < ['tick'] >
+written stream < move|right
+ >
+read stream < ['pos|0|1|1', 'pos|1|3|1', 'pos|2|5|3', 'pos|3|8|6', 'pos|4|6|8', 'pos|5|11|11'] >
+read stream < ['tick'] >
+written stream < move|up
+ >
+read stream < ['pos|0|1|0', 'pos|1|3|2', 'pos|2|5|4', 'pos|3|8|5', 'pos|4|6|7', 'pos|5|0|11'] >
+read stream < ['tick'] >
+written stream < move|right
+ >
+read stream < ['pos|0|1|11', 'pos|1|4|2', 'pos|2|6|4', 'pos|3|9|5', 'pos|4|5|7', 'pos|5|0|10'] >
+read stream < ['tick'] >
+written stream < move|right
+ >
+read stream < ['pos|0|2|11', 'pos|1|4|1', 'pos|2|6|5', 'pos|3|10|5', 'pos|4|4|7', 'pos|5|1|10'] >
+read stream < ['tick'] >
+written stream < move|left
+ >
+read stream < ['lose|0|17'] >
