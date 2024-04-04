@@ -11,12 +11,7 @@ from utils import log, getAuth, logClear, splash, updateStats
 from connection import Connection
 from logic import GameHandler
 
-def main(host: str, port: int, chat: bool=False, chatProb: int|float=10) -> None:
-    """Parameters:
-    * `host`: str - the server host
-    * `port`: int - the server port
-    * `chat`: bool - whether to enable chat
-    * `chatProb`: int|float - the probability of sending a chat message each tick in percent"""
+def main(host: str, port: int, chat: bool=False, chatProb: float=0.1) -> None:
     logClear()
     tcp = Connection(host, port)
     log("connection established")
@@ -40,7 +35,7 @@ def main(host: str, port: int, chat: bool=False, chatProb: int|float=10) -> None
                         newMove = game.getMe().nextMove()
                         game.getMe().dir = newMove
                         tcp.writeStream("move", newMove)
-                        if chat and random() < chatProb/100:
+                        if chat and random() < chatProb:
                             sleep(0.05)
                             tcp.writeStream("chat", splash())
                     case "die":
