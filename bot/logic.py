@@ -35,10 +35,6 @@ class Player:
         """Adds a message to the player's message history."""
         self.messages.append(msg)
 
-    def nextMove(self) -> str: # nextMove is intentionally a method of the Player class to add ability to simulate moves of all players
-        """Returns the next move for the player."""
-        return randMove(self.dir) #todo: implement better logic
-
 class GameHandler:
     def __init__(self, sizeX: str, sizeY: str, id: str) -> None:
         """Creates a game object."""
@@ -72,3 +68,11 @@ class GameHandler:
     def getNpcs(self) -> dict[str, Player]:
         """Returns all the other players except the bot."""
         return {k: v for k, v in self.players.items() if k != self.myID}
+
+    def nextMove(self, id: str=None) -> str: # has ability to simulate moves of other players
+        """Returns the next move for a player"""
+        if id is None:
+            id = self.myID
+        newMove = randMove(self.players[id].dir) #todo: implement better logic
+        self.players[id].dir = newMove
+        return newMove

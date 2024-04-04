@@ -32,8 +32,7 @@ def main(host: str, port: int, chat: bool=False, chatProb: float=0.1) -> None:
                     case "player":
                         game.addPlayer(*msg[1:])
                     case "tick":
-                        newMove = game.getMe().nextMove()
-                        game.getMe().dir = newMove
+                        newMove = game.nextMove()
                         tcp.writeStream("move", newMove)
                         if chat and random() < chatProb:
                             sleep(0.05)

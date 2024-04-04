@@ -40,7 +40,6 @@ def updateStats(wins: int, losses: int) -> None:
     with open(file("stats.csv"), "w") as f:
         f.write(f"wins;losses\n{wins};{losses}")
 
-#temp
 def randMove(dir: str) -> str:
     """TEMPORARY: Returns a random direction while avoiding impossible move (180-turn)."""
     if dir is None:
