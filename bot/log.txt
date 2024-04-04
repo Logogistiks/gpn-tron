@@ -1,15 +1,20 @@
 connection established
 [92mWRITE[37m join|Logogistiksv0.0|1234Nase
 
-[91mREAD[37m ['motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md']
-[91mREAD[37m ['game|12|12|2']
-[91mREAD[37m ['player|0|bot3', 'player|1|bot2', 'player|2|Logogistiksv0.0', 'player|3|bot4', 'player|4|bot1', 'player|5|bot0', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick']
-[92mWRITE[37m move|up
+[94mREAD[37m ['motd|You can find the protocol documentation here: https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md']
+[94mREAD[37m ['game|12|12|3']
+[94mREAD[37m ['player|0|bot0', 'player|1|bot1', 'player|2|bot2', 'player|3|Logogistiksv0.0', 'player|4|bot3', 'player|5|bot4', 'pos|0|0|0', 'pos|1|2|2', 'pos|2|4|4', 'pos|3|6|6', 'pos|4|8|8', 'pos|5|10|10', 'tick']
+[92mWRITE[37m move|down
 
-[91mREAD[37m ['pos|0|11|0', 'pos|1|3|2', 'pos|2|4|3', 'pos|3|6|7', 'pos|4|8|9', 'pos|5|11|10']
-[91mREAD[37m ['tick']
+[94mREAD[37m ['pos|0|0|1', 'pos|1|2|3', 'pos|2|3|4', 'pos|3|6|7', 'pos|4|7|8', 'pos|5|9|10']
+[94mREAD[37m ['tick']
 [92mWRITE[37m move|left
 
-[91mREAD[37m ['lose|0|49']
-connection closed
-connection closed
+[92mWRITE[37m chat|We needs it. Must have the precious.
+
+[94mREAD[37m ['message|3|We needs it. Must have the precious.']
+[94mREAD[37m ['pos|0|11|1', 'pos|1|3|3', 'pos|2|3|5', 'pos|3|5|7', 'pos|4|6|8', 'pos|5|9|9']
+[94mREAD[37m ['tick']
+[92mWRITE[37m move|down
+
+[94mREAD[37m ['lose|0|14']

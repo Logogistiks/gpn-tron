@@ -29,7 +29,7 @@ def logClear() -> None:
 def splash() -> str:
     """Returns a random splash message from the splashes file."""
     with open(file("splashes.txt"), "r") as f:
-        return choice(f.readlines())
+        return choice(f.readlines()).replace("\n", "")
 
 def reverseDir(dir: str) -> str:
     """Returns the opposite direction of the given direction."""
