@@ -12,6 +12,8 @@ from connection import Connection
 from logic import GameHandler
 
 def main(host: str, port: int, chat: bool=False, chatProb: float=0.1) -> None:
+    if not 0 <= chatProb <= 1:
+        raise ValueError("chatProb must be between 0 and 1")
     logClear()
     tcp = Connection(host, port)
     log("connection established")
@@ -35,7 +37,7 @@ def main(host: str, port: int, chat: bool=False, chatProb: float=0.1) -> None:
                     case "tick":
                         newMove = game.nextMove()
                         tcp.writeStream("move", newMove)
-                        if chat and random() < chatProb:
+                        if (chat and random() < chatProb) or (chat and chatProb == 1): # handle edge case
                             sleep(0.05)
                             tcp.writeStream("chat", splash())
                     case "die":

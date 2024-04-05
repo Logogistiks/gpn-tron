@@ -24,7 +24,7 @@ class Connection:
         cmdlst = decoded.split("\n")[:-1] # ["cmd1|p11|p12", "cmd2|p21|p22"]
         if verbose:
             log(f"{Fore.LIGHTCYAN_EX}READ{Fore.WHITE} {cmdlst}")
-        return list(map(lambda x: x.split("|"), cmdlst))
+        return list(map(lambda x: x.split("|"), cmdlst)) # [["cmd1", "p11", "p12"], ["cmd2", "p21", "p22"]]
 
     def writeStream(self, *args: str, verbose: bool=True) -> None:
         """Writes a stream of commands to the server."""
