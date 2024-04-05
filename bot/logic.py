@@ -77,17 +77,6 @@ class GameHandler:
         """Returns all the other players except the bot."""
         return {k: v for k, v in self.players.items() if k != self.myID}
 
-    def getNewPos(self, posX: str, posY: str, dir: str) -> tuple[str, str]:
-        """Returns the new position after moving in the given direction."""
-        if dir == "up":
-            return posX, str((int(posY) - 1) % self.sizeY)
-        if dir == "down":
-            return posX, str((int(posY) + 1) % self.sizeY)
-        if dir == "left":
-            return str((int(posX) - 1) % self.sizeX), posY
-        if dir == "right":
-            return str((int(posX) + 1) % self.sizeX), posY
-
     def nextMove(self, pID: str=None) -> str: # has ability to simulate moves of other players
         """Moves the player and returns the move."""
         if pID is None:
@@ -102,11 +91,25 @@ class GameHandler:
         return randMove(self.players[pID].dir)
     '''
 
-    def calcMove(self, pID: str) -> str:
+    def calcMove(self, pID: str) -> str: # exactly the same as serverside bots
         """Calculates the next move for a player."""
+        x, y = self.players[pID].getPos()
+        x, y = int(x), int(y)
         possibleMoves = []
-        for dir in DIRECTIONS:
-            newPos = self.getNewPos(*self.players[pID].getPos(), dir)
-            if self.grid[int(newPos[1])][int(newPos[0])] == " ":
-                possibleMoves.append(dir)
+        if y == 0 and self.grid[self.sizeY - 1][x] == " ":
+            possibleMoves.append("up")
+        if y > 0 and self.grid[y - 1][x] == " ":
+            possibleMoves.append("up")
+        if x == 0 and self.grid[y][self.sizeX - 1] == " ":
+            possibleMoves.append("left")
+        if x > 0 and self.grid[y][x - 1] == " ":
+            possibleMoves.append("left")
+        if y == self.sizeY - 1 and self.grid[0][x] == " ":
+            possibleMoves.append("down")
+        if y < self.sizeY - 1 and self.grid[y + 1][x] == " ":
+            possibleMoves.append("down")
+        if x == self.sizeX - 1 and self.grid[y][0] == " ":
+            possibleMoves.append("right")
+        if x < self.sizeX - 1 and self.grid[y][x + 1] == " ":
+            possibleMoves.append("right")
         return choice(possibleMoves) if possibleMoves else "up" # theres nothing we can do but surrender
