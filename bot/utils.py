@@ -26,10 +26,13 @@ def logClear() -> None:
     with open(file("log.txt"), "w") as f:
         f.write("")
 
-def splash() -> str:
+def splash(fname: str="splashes.txt") -> str:
     """Returns a random splash message from the splashes file."""
-    with open(file("splashes.txt"), "r") as f:
-        return choice(f.readlines()).replace("\n", "")
+    if not os.path.exists(file(fname)):
+        return "I am a bot"
+    with open(file(fname), "r") as f:
+        content = f.readlines()
+        return "I am a bot" if not content else choice(content).replace("\n", "")
 
 def reverseDir(dir: str) -> str:
     """Returns the opposite direction of the given direction."""
