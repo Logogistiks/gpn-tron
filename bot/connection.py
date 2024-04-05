@@ -32,3 +32,6 @@ class Connection:
         self.socket.send(msg.encode())
         if verbose:
             log(f"{Fore.LIGHTGREEN_EX}WRITE{Fore.WHITE} {msg}")
+
+if __name__ == "__main__":
+    print("This file is not meant to be run directly")

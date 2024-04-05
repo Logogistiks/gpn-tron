@@ -40,3 +40,6 @@ def randMove(dir: str) -> str:
     if dir is None:
         return choice(DIRECTIONS)
     return choice(tuple(set(DIRECTIONS) - {reverseDir(dir)}))
+
+if __name__ == "__main__":
+    print("This file is not meant to be run directly")

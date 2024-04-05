@@ -113,3 +113,6 @@ class GameHandler:
         if x < self.sizeX - 1 and self.grid[y][x + 1] == " ":
             possibleMoves.append("right")
         return choice(possibleMoves) if possibleMoves else "up" # theres nothing we can do but surrender
+
+if __name__ == "__main__":
+    print("This file is not meant to be run directly")
