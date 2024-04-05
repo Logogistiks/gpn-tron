@@ -22,3 +22,7 @@
 If you don't want messages to be broadcasted, you can edit `game.py` and change the `chat=True` parameter in the main call at the bottom of the file.
 
 Every gametick, the program decides randomly if a message is broadcasted. You can control the probability by editing `game.py` and changing the `chatProb` parameter in the main call at the bottom of the file, it has to be a float between 0 and 1 and is 0.1 by default, meaning around every 10 gameticks a message is sent.
+
+
+## Documentation
+https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md
