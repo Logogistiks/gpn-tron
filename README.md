@@ -25,4 +25,4 @@ Every gametick, the program decides randomly if a message is broadcasted. You ca
 
 
 ## Documentation
-https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md
+https://github.com/freehuntx/gpn-tron/blob/master/README.md
