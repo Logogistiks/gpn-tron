@@ -161,3 +161,8 @@ cython_debug/
 
 # vscode
 .vscode/*
+
+# project
+bot/auth.csv
+bot/log.txt
+bot/stats.csv
