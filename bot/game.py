@@ -7,7 +7,7 @@ from time import sleep
 from colorama import Fore
 
 # local
-from utils import log, getAuth, logClear, splash, updateStats
+from utils import log, getAuth, logClear, splash
 from connection import Connection
 from logic import GameHandler
 
@@ -15,6 +15,7 @@ def main(host: str, port: int, chat: bool=False, chatProb: float=0.1) -> None:
     logClear()
     tcp = Connection(host, port)
     log("connection established")
+    print(getAuth().values())
     tcp.writeStream("join", *getAuth().values())
 
     try:
@@ -43,9 +44,9 @@ def main(host: str, port: int, chat: bool=False, chatProb: float=0.1) -> None:
                     case "message":
                         game.players[msg[1]].addMsg(msg[2])
                     case "win":
-                        updateStats(msg[1], msg[2])
+                        pass # ignore, stream dead until next game
                     case "lose":
-                        updateStats(msg[1], msg[2])
+                        pass # ignore, stream dead until next game
     except KeyboardInterrupt:
         tcp.end()
         log("connection closed")

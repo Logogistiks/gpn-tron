@@ -35,11 +35,6 @@ def reverseDir(dir: str) -> str:
     """Returns the opposite direction of the given direction."""
     return DIRECTIONS[(DIRECTIONS.index(dir) + 2) % 4] # depends on the defined order of DIRECTIONS
 
-def updateStats(wins: int, losses: int) -> None:
-    """Updates the stats file with the given wins and losses."""
-    with open(file("stats.csv"), "w") as f:
-        f.write(f"wins;losses\n{wins};{losses}")
-
 def randMove(dir: str) -> str:
     """TEMPORARY: Returns a random direction while avoiding impossible move (180-turn)."""
     if dir is None:
