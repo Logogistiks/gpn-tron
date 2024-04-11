@@ -1,7 +1,6 @@
 # https://github.com/freehuntx/gpn-tron/blob/master/PROTOCOL.md
 # https://github.com/freehuntx/gpn-tron/blob/master/ERRORCODES.md
 
-import os
 from random import random
 from time import sleep
 from colorama import Fore
