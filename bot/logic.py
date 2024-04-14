@@ -1,6 +1,7 @@
 """Handles the game logic."""
 
 from random import choice
+from time import time
 
 # local
 from utils import DIRECTIONS, randMove
@@ -45,8 +46,14 @@ class GameHandler:
         self.grid = [[" " for _ in range(int(sizeX))] for _ in range(int(sizeY))]
         self.players: dict[str, Player] = {}
         self.myID = pID
-        self.wins = 0
-        self.losses = 0
+        self.startTime = time()
+
+    def currentTickTime(self) -> float:
+        """Returns the length of a tick at the current elapsed time in seconds.
+        This is the time you have to calculate your move."""
+        BASETICKRATE = 1
+        TICKINCREASEINTERVAL = 10
+        return 1 / (BASETICKRATE + int((time() - self.startTime) / TICKINCREASEINTERVAL))
 
     def addPlayer(self, pID: str, name: str, posX: str=None, posY: str=None) -> None:
         """Adds a player to the game."""
