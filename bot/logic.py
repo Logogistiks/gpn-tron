@@ -88,17 +88,15 @@ class GameHandler:
         """Moves the player and returns the move."""
         if pID is None:
             pID = self.myID
-        newMove = self.calcMove(pID)
+        newMove = self.calcMoveV2(pID)
         self.players[pID].dir = newMove
         return newMove
 
-    '''
-    def calcMove(self, pID: str) -> str:
-        """Calculates the next move for a player."""
+    def calcMoveV1(self, pID: str) -> str:
+        """DEPRECATED: Calculates the next move for a player."""
         return randMove(self.players[pID].dir)
-    '''
 
-    def calcMove(self, pID: str) -> str: # exactly the same as serverside bots
+    def calcMoveV2(self, pID: str) -> str: # exactly the same as serverside bots
         """Calculates the next move for a player."""
         x, y = self.players[pID].getPos()
         x, y = int(x), int(y)
