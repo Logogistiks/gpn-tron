@@ -166,3 +166,4 @@ cython_debug/
 bot/auth.csv
 bot/log.txt
 bot/stats.csv
+bot/splashes_old.txt
