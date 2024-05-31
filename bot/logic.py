@@ -2,6 +2,7 @@
 
 from random import choice
 from time import time
+from copy import deepcopy
 
 # local
 from utils import DIRECTIONS, randMove
@@ -84,6 +85,18 @@ class GameHandler:
         """Returns all the other players except the bot."""
         return {k: v for k, v in self.players.items() if k != self.myID}
 
+    def calcnewPos(self, posX: str, posY: str, dir: str) -> tuple[str, str]:
+        """Calculates the new position of a player."""
+        x, y = int(posX), int(posY)
+        if dir == "up":
+            return x, (y - 1) % self.sizeY
+        if dir == "right":
+            return (x + 1) % self.sizeX, y
+        if dir == "down":
+            return x, (y + 1) % self.sizeY
+        if dir == "left":
+            return (x - 1) % self.sizeX, y
+
     def nextMove(self, pID: str=None) -> str: # has ability to simulate moves of other players
         """Moves the player and returns the move."""
         if pID is None:
@@ -93,11 +106,11 @@ class GameHandler:
         return newMove
 
     def calcMoveV1(self, pID: str) -> str:
-        """DEPRECATED: Calculates the next move for a player."""
+        """DEPRECATED: Calculates the next move for a player based on random."""
         return randMove(self.players[pID].dir)
 
     def calcMoveV2(self, pID: str) -> str: # exactly the same as serverside bots
-        """Calculates the next move for a player."""
+        """Calculates the next move for a player based on random, but doesnt allow moves that would result in death."""
         x, y = self.players[pID].getPos()
         x, y = int(x), int(y)
         possibleMoves = []
@@ -118,6 +131,28 @@ class GameHandler:
         if x < self.sizeX - 1 and self.grid[y][x + 1] == " ":
             possibleMoves.append("right")
         return choice(possibleMoves) if possibleMoves else "up" # theres nothing we can do
+
+    def calcMoveV3(self, pID: str) -> str:
+        """Calculates the next move for a player based on counting free cells in each direction straight."""
+        x, y = self.players[pID].getPos()
+        x, y = int(x), int(y)
+        possibleMoves = []
+        #for dir in set(DIRECTIONS) - set(self.players[pID].dir):
+        dirs: list[str] = list(deepcopy(DIRECTIONS))
+        dirs.remove(self.players[pID].dir)
+        dirs.insert(0, self.players[pID].dir) # pull current direction to front => max will choose current direction first => use max grid space
+        for dir in dirs:
+            freeCells = 0
+            while True:
+                newPosX, newPosY = self.calcnewPos(x, y, dir)
+                if newPosX == x and newPosY == y:
+                    break
+                if self.grid[newPosY][newPosX] != " ":
+                    break
+                freeCells += 1
+            if freeCells > 0:
+                possibleMoves.append((dir, freeCells))
+        return max(possibleMoves, key=lambda x: x[1])[0] if possibleMoves else "up" # theres nothing we can do
 
 if __name__ == "__main__":
     print("This file is not meant to be run directly")

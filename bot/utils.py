@@ -3,7 +3,7 @@
 import os
 from random import choice
 
-DIRECTIONS = ("up", "right", "down", "left") # do not change order
+DIRECTIONS: tuple[str] = ("up", "right", "down", "left") # do not change order
 
 def file(path: str) -> str: # this is because i openend the repo directory in vscode, not the bot directory, it should work nevertheless
     """Returns the absolute path of the file."""
